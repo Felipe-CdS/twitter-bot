@@ -12,7 +12,4 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 
-while(True):
-    if(dt.datetime.now().minute == 0):
-        api.update_status("Vai votar!")
-        time.sleep(60)
+api.update_status("Vai votar!")
