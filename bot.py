@@ -12,7 +12,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 imagePath = "img.jpg";
-tweetString = dt.datetime.now().strftime("%x %X");
+tweetString = dt.datetime.now().strftime("%d/%m/%Y %H:%M");
 tweetString += "\nHora de coletar pontos no TheKKing, Once!";
 
 if(dt.datetime.now().hour == 13):
