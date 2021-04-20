@@ -1,5 +1,6 @@
 import tweepy, time, sys
 from os import environ
+import datetime as dt
 
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
@@ -10,6 +11,11 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
+
 while(True):
-    api.update_status("Test")
-    time.sleep(100)
+    if(dt.datetime.now().minute == 0):
+        api.update_status("Vai votar!")
+        time.sleep(60)
+    else:
+        api.update_status("Não vai votar!")
+        time.sleep(60)
