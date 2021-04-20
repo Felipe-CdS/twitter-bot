@@ -16,6 +16,3 @@ while(True):
     if(dt.datetime.now().minute == 0):
         api.update_status("Vai votar!")
         time.sleep(60)
-    else:
-        api.update_status("Não vai votar!")
-        time.sleep(60)
