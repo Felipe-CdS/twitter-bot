@@ -19,6 +19,8 @@ hours = dt.datetime.now().hour;
 minutes = dt.datetime.now().minute;
 if(minutes < 10):
     minutes = "0" + str(minutes);
+if(hours < 0):
+    hours = 24 - hours;
 
 tweetString = dt.datetime.now().strftime("%d/%m/%Y ");
 tweetString += str(hours-3) + ":" + str(minutes);
