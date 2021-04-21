@@ -32,7 +32,7 @@ if(hours < 10):
     hours = "0" + str(hours);
 
 tweetString = dt.datetime.now().strftime("%d/%m/%Y ");
-tweetString += str(hours-3) + ":" + str(minutes);
+tweetString += str(hours) + ":" + str(minutes);
 tweetString += "\nHora de coletar pontos no TheKKing, Once!";
 
 if(dt.datetime.now().hour == 13):
