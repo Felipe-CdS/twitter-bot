@@ -26,10 +26,8 @@ tweetString += "\nHora de coletar pontos no TheKKing, Once!";
 
 if(hours == 13):
     tweetString += "\nNão se esqueça do Mubeat também, já passou 24h!";
-
-if((hours % 2) == 0):
-    imagePath = "memes/4.jpg";
-else:
-    imagePath = "memes/4.jpg";
+    
+hourToImgNumber = (hours % 7 + 1);
+imagePath = "memes/"+ str(hourToImgNumber) + ".jpg";
     
 api.update_with_media(imagePath, tweetString);
