@@ -28,8 +28,8 @@ if(hours == 13):
     tweetString += "\nNão se esqueça do Mubeat também, já passou 24h!";
 
 if((hours % 2) == 0):
-    imagePath = "1.jpg";
+    imagePath = "memes/4.jpg";
 else:
-    imagePath = "2.jpg";
+    imagePath = "memes/4.jpg";
     
 api.update_with_media(imagePath, tweetString);
